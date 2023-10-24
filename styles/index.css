@@ -257,6 +257,7 @@ footer .foot-intro {
 footer .foot-info {
   display: flex;
   justify-content: space-around;
+  gap: 1em;
 }
 
 footer .foot-info ul li {

@@ -64,16 +64,16 @@ p {
   align-self: flex-start;
   background-color: var(--primary-color);
   color: var(--light-color);
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 2em 0;
+  width: 50%;
   padding: 1em 2em;
   transition: all 1s;
-  transition-timing-function: cubic-bezier(0.5, 3, 0, 1);
 }
 .btn:hover {
   background: transparent;
-  color: var(--dark-neutral-color);
-  transform: rotatex(20deg) rotateY(20deg);
+  color: var(--darker-color);
+  letter-spacing: 3px;
 }
 
 .p-color-text {
@@ -161,13 +161,13 @@ p {
      HEADER
   ///////////// */
 header {
-  min-height: 100%;
+  height: 75vh;
   background: url(../images/sign.svg) center center rgba(36, 35, 36, 0.589);
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   color: var(--light-color);
-  position: relative;
+  /* position: relative; */
 }
 
 /* MAIN */
@@ -178,8 +178,10 @@ main {
   margin: 1em auto;
   height: 85vh;
   position: absolute;
-  top: 10vh;
+  bottom: 0;
   left: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 aside {
@@ -193,11 +195,10 @@ aside {
   justify-content: space-between;
 }
 section {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  /* border-radius: 20px; */
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+
   background-color: var(--light-color);
-  padding: 2em;
 }
 figure.logos {
   height: 35%;
@@ -221,6 +222,7 @@ figure.image img {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 1.5em;
 }
 
 .circle {
@@ -246,12 +248,15 @@ FORM SECTION
 /* FORM */
 
 form {
-  padding: 2em;
+  padding: 1.5em;
   width: 70%;
 }
+form p {
+  text-align: center;
+}
 .form__input {
-  margin: 10px 0;
-  padding: 1em 0;
+  margin: 5px 0;
+  padding: 0.5em 0;
 }
 
 label {
@@ -269,20 +274,113 @@ textarea {
   line-height: 30px; /* 125% */
   text-transform: capitalize;
 }
+input::placeholder {
+  text-align: center;
+}
+
+/* CHECKBOX */
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.checkbox-wrapper-46 .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098a9;
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-46 .cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.checkbox-wrapper-46 .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #506eec;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.checkbox-wrapper-46 .cbx span:last-child {
+  padding-left: 8px;
+}
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+  border-color: #506eec;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+  background: #506eec;
+  border-color: #506eec;
+  animation: wave-46 0.4s ease;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+/*  CHECCKBOX*/
 
 input,
 textarea,
 button {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: none;
   border-radius: 11px;
-  background: var(--dark-neutral-color);
+  background: var(--light-neutral-col0r);
 }
 .form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#test {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 40px;
+}
+.one {
+  flex: 1;
 }
 form button {
   border-radius: 8px;
@@ -303,81 +401,11 @@ form button {
 #dateError,
 #timeError,
 #messageError {
-  color: white;
+  color: var(--darker-color);
   font-family: Poppins;
 }
 
 /* RESPONSIVE  */
 /* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 800px) {
-  .container {
-    max-width: 90%;
-    padding: 0 0.5em;
-    margin: 0 auto;
-  }
 
-  .test .book {
-    display: block;
-    color: #fff;
-    font-family: Poppins;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
-  }
-  .logo a {
-    display: flex;
-    gap: 0.5em;
-    padding: 0;
-  }
-  .nav-toggle {
-    display: none;
-  }
-  .top-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
-  }
-  .contact-info a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-  }
-  .contact-info a svg {
-    height: 19px;
-  }
-  .contact-info a {
-    color: #fff;
-    font-family: Poppins;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: lowercase;
-  }
-  #test {
-    display: flex !important;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .one {
-    flex: 1;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-  .test .book {
-    font-size: 15px;
-  }
-  .links a {
-    font-size: 15px;
-  }
-  .top-info {
-    width: 65%;
-  }
-}
+/* vbjfd */

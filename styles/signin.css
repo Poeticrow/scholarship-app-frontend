@@ -64,16 +64,16 @@ p {
   align-self: flex-start;
   background-color: var(--primary-color);
   color: var(--light-color);
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 2em 0;
+  width: 50%;
   padding: 1em 2em;
   transition: all 1s;
-  transition-timing-function: cubic-bezier(0.5, 3, 0, 1);
 }
 .btn:hover {
   background: transparent;
-  color: var(--dark-neutral-color);
-  transform: rotatex(20deg) rotateY(20deg);
+  color: var(--darker-color);
+  letter-spacing: 3px;
 }
 
 .p-color-text {
@@ -117,7 +117,9 @@ p {
   display: flex;
   justify-content: space-between;
   width: 70%;
+  /* flex-wrap: wrap; */
 }
+
 .menu-nav-items {
   display: flex;
 }
@@ -128,7 +130,7 @@ p {
 .menu-items li {
   list-style: none;
   margin-left: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .navbar a {
@@ -161,13 +163,13 @@ p {
      HEADER
   ///////////// */
 header {
-  min-height: 100%;
+  height: 75vh;
   background: url(../images/sign.svg) center center rgba(36, 35, 36, 0.589);
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   color: var(--light-color);
-  position: relative;
+  /* position: relative; */
 }
 
 /* MAIN */
@@ -178,8 +180,10 @@ main {
   margin: 1em auto;
   height: 85vh;
   position: absolute;
-  top: 10vh;
+  bottom: 0;
   left: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 aside {
@@ -193,11 +197,10 @@ aside {
   justify-content: space-between;
 }
 section {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  /* border-radius: 20px; */
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+
   background-color: var(--light-color);
-  padding: 2em;
 }
 figure.logos {
   height: 35%;
@@ -221,6 +224,7 @@ figure.image img {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 1.5em;
 }
 
 .circle {
@@ -246,16 +250,33 @@ FORM SECTION
 /* FORM */
 
 form {
-  padding: 2em;
+  padding: 1.5em;
+  margin: auto;
+  width: 60%;
+  gap: 2em;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+}
+form p {
+  text-align: center;
 }
 .form__input {
-  margin: 10px 0;
-  padding: 1em 0;
+  margin: 5px 0;
+  padding: 0.5em 0;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
+  color: var(--darker-color);
+
+  font-family: var(--primary-ff);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 input,
 textarea {
@@ -268,6 +289,9 @@ textarea {
   line-height: 30px; /* 125% */
   text-transform: capitalize;
 }
+input::placeholder {
+  text-align: center;
+}
 
 input,
 textarea,
@@ -276,12 +300,20 @@ button {
   padding: 10px;
   border: none;
   border-radius: 11px;
-  background: var(--dark-neutral-color);
+  background: var(--light-neutral-col0r);
 }
 .form-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#test {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 40px;
+}
+.one {
+  flex: 1;
 }
 form button {
   border-radius: 8px;
@@ -302,32 +334,11 @@ form button {
 #dateError,
 #timeError,
 #messageError {
-  color: white;
+  color: var(--darker-color);
   font-family: Poppins;
 }
 
 /* RESPONSIVE  */
 /* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 800px) {
-  #test {
-    display: flex !important;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  .one {
-    flex: 1;
-  }
-}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-  .test .book {
-    font-size: 15px;
-  }
-  .links a {
-    font-size: 15px;
-  }
-  .top-info {
-    width: 65%;
-  }
-}
+/* vbjfd */

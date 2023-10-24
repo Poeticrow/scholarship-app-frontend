@@ -1,3 +1,7 @@
+/* ///////////////////
+PAGES: INDEX
+//////////////////// */
+
 @media (max-width: 800px) {
   .navbar {
     opacity: 0.95;
@@ -169,7 +173,88 @@
     font-size: 1.3rem;
   }
 
+  footer .foot-info {
+    flex-wrap: wrap;
+  }
+
   footer .foot-intro p {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 1210px) {
+  .menu-items {
+    width: 100%;
+  }
+}
+/* PAGES: INDEX(END) */
+
+/* ////////////// 
+PAGES: SIGNIN AND SIGNUP
+///////////////*/
+@media (max-width: 800px) {
+  form {
+    width: 85%;
+  }
+  form p {
+    font-size: 1rem;
+  }
+
+  form label {
+    font-size: 0.7rem;
+  }
+  section.container .head-text {
+    padding: 1.5em;
+  }
+  section.container .head-text h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    margin: auto;
+    padding: 1.5em 0;
+    width: 90%;
+    border-radius: 0;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+  }
+
+  main section {
+    width: 100%;
+    border-radius: 0;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
+  aside figure.image {
+    display: none;
+  }
+  form {
+    width: 85%;
+  }
+  form p {
+    font-size: 1rem;
+  }
+
+  form label {
+    font-size: 0.7rem;
+  }
+  section.container .head-text {
+    padding: 1.5em;
+  }
+  section.container .head-text h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1210px) {
+  form {
+    gap: 4px;
+  }
+}
+
+/* PAGES: SIGNIN AND SIGNUP(END) */
