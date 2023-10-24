@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* VARIABLES */
+:root {
+  --primary-color: #24306e;
+
+  --light-color: #fff;
+  --dark-color: #616161;
+  --darker-color: #404040;
+  --icon-fill: #24306eb2;
+  --dark-neutral-color: #d9d9d9;
+  --light-neutral-col0r: #e2ebeb;
+  --primary-ff: "Poppins", sans-serif;
+}

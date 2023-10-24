@@ -63,7 +63,8 @@
 
   .navbar .menu-items {
     padding-top: 100px;
-    background: #fff;
+    background: var(--dark-color);
+    /* filter: blur(8px); */
     height: 100vh;
     max-width: 300px;
     transform: translate(-150%);
@@ -127,24 +128,48 @@
 
   .header {
     flex-direction: column-reverse;
-    margin: 4em auto 0 auto;
+    margin: 5em auto 0 auto;
     justify-content: center;
     align-items: center;
     padding: 3.5em 0;
   }
-  .header .head-img {
-    width: 80%;
-    height: 80%;
-  }
+
   .header .head-text h1 {
     margin: 0.5em 0 0 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 48px;
+  }
+  .header .head-text p {
+    margin: 0.5em 0 0 0;
+    font-size: 1.2rem;
+    line-height: 28px;
+  }
+
+  #others {
+    gap: 2em;
+  }
+
+  #others .info {
+    flex-wrap: wrap;
+  }
+  #others .info:nth-child(2) {
+    flex-wrap: wrap-reverse;
   }
 }
 
 @media (max-width: 500px) {
   .navbar-container input[type="checkbox"]:checked ~ .logo {
     display: none;
+  }
+
+  .info .info-text h3 {
+    font-size: 2.5rem;
+  }
+  .info .info-text p {
+    font-size: 1.3rem;
+  }
+
+  footer .foot-intro p {
+    font-size: 1rem;
   }
 }
