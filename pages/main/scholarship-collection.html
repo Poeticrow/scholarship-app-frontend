@@ -15,8 +15,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/main/scholarship-collection.css"
+    />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -27,48 +29,85 @@
       src="https://kit.fontawesome.com/d1f77bff0d.js"
       crossorigin="anonymous"
     ></script>
-    <title>The Scholars</title>
+    <title>The Scholars | Scholarship list</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="navbar-container container">
-          <input type="checkbox" name="" id="" />
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-          <div class="logo">
-            <img src="./images/logo.svg" alt="" />
-          </div>
-          <div class="menu-items">
-            <ul class="menu-nav-items">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Scholarships</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
+    <main>
+      <nav>
+        <div class="nav-container">
+          <a href="../../index.html">
+            <figure class="logo">
+              <img src="../../images/logo.svg" alt="" />
+            </figure>
+          </a>
 
-            <div class="auth">
-              <a href="#">Sign In</a>
-              <a href="#">Sign Up</a>
+          <ul>
+            <li>
+              <a href="./dashboard.html">
+                <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="./criteria.html">
+                <i class="fa-regular fa-square-check"></i>
+                <span>Search by Criteria</span>
+              </a>
+            </li>
+            <li>
+              <a href="./payments.html">
+                <i class="fa-solid fa-money-bills"></i> <span>Payment</span>
+              </a>
+            </li>
+            <li class="current">
+              <a href="./scholarship-collection.html">
+                <i class="fa-regular fa-clipboard"></i>
+                <span>Scholarship collection</span>
+              </a>
+            </li>
+            <li><i class="fa-solid fa-user"></i> <span>Profile</span></li>
+            <li><i class="fa-solid fa-lock"></i> <span>Log out</span></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="main">
+        <div class="head-section">
+          <h1>Welcome, Jane Doe</h1>
+
+          <div class="form-group">
+            <input class="search__input" type="text" placeholder="Search" />
+
+            <div class="icons-profile">
+              <i class="fa-regular fa-bell"></i>
+
+              <a href="./admin-dash.html">
+                <i class="fa-solid fa-circle-info"></i>
+              </a>
+
+              <figure class="profile-pic">
+                <img src="../../images/find-1.svg" alt="me" />
+              </figure>
             </div>
           </div>
         </div>
-      </nav>
-      <section class="header container">
-        <div class="head-text">
-          <h1><span>Find scholarships</span> and achieve your dreams</h1>
-          <p>Get financial aid to cater for your studies.</p>
-          <p>
-            We provide a colletion of scholarships applications that suit your
-            needs.
-          </p>
-          <a href="#" class="btn">Get started</a>
+        <div class="body-section">
+          <div class="card">
+            <p>Search by criteria</p>
+            <i class="fa-regular fa-square-check"></i>
+          </div>
+          <div class="card">
+            <p>Make Payment</p>
+            <i class="fa-solid fa-money-bills"></i>
+          </div>
+          <div class="card">
+            <p>Scholarship list</p>
+            <i class="fa-regular fa-clipboard"></i>
+          </div>
+          <div class="card">
+            <p>Profile</p>
+            <i class="fa-solid fa-user"></i>
+          </div>
         </div>
-        <div class="flow"></div>
       </section>
-    </header>
+    </main>
   </body>
 </html>

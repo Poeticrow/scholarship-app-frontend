@@ -8,12 +8,188 @@
 /* VARIABLES */
 :root {
   --primary-color: #24306e;
-
+  --secondary-text-color: rgba(36, 48, 110, 0.7);
+  --bg-secondary: #f4f7fe;
   --light-color: #fff;
   --dark-color: #616161;
   --darker-color: #404040;
   --icon-fill: #24306eb2;
   --dark-neutral-color: #d9d9d9;
   --light-neutral-col0r: #e2ebeb;
+  --light-neutral-col0r-2: #f5f5f5;
   --primary-ff: "Poppins", sans-serif;
+}
+/* ROOT STYLING */
+body {
+  font-family: var(--primary-ff);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  color: var(--secondary-text-color);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.79031rem; /* 89.516% */
+  letter-spacing: -0.04rem;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  background-color: var(--light-neutral-col0r-2);
+  gap: 3em;
+  box-shadow: 0px 3.30909px 19.85454px -0.82727px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16.545454025268555px);
+}
+nav {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* UTILITIES */
+.current {
+  border-right: 5px solid var(--light-color);
+}
+
+/* UTILITIES: END */
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70%;
+}
+.nav-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.nav-container ul li {
+  padding: 0 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.nav-container ul li:hover {
+  letter-spacing: 0.1px;
+  transform: scale(1.05);
+}
+
+section.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+/* HEADER INFO */
+section.main .head-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  background-color: var(--light-color);
+  padding: 0.5em;
+  border-radius: 50px;
+  display: flex;
+  /* height: max-content; */
+  width: 60%;
+  justify-content: space-between;
+}
+
+.icons-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.icons-profile i {
+  color: var(--secondary-text-color);
+  font-size: 1.6rem;
+}
+
+.profile-pic {
+  width: 40px;
+  height: auto;
+  align-self: center;
+}
+.profile-pic img {
+  border-radius: 50%;
+}
+
+/* SEARCH BOX: STYLING */
+.search__input {
+  width: 60%;
+  padding: 12px 28px;
+
+  background-color: var(--bg-secondary);
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #575756;
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 5% center;
+  border-radius: 50px;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.search__input::placeholder {
+  color: rgba(87, 87, 86, 0.8);
+  text-transform: uppercase;
+  padding: 1em;
+  letter-spacing: 1.5px;
+}
+/* SEARCH BOX: STYLING: END */
+
+/* BODY SECTION */
+section.main .body-section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 1.5em;
+  column-gap: 2.5em;
+  height: 80%;
+  width: 100%;
+}
+
+.body-section .card {
+  width: 34.125rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+  border-radius: 1.25rem;
+  background: var(--light-color);
+  box-shadow: 0px 4.07454px 24.44723px -1.01863px rgba(0, 0, 0, 0.11);
+  backdrop-filter: blur(20.372695922851562px);
+  transition: all 0.3s ease-in-out;
+}
+.body-section .card:hover {
+  transform: scale(1.04);
+}
+
+.body-section .card i {
+  color: var(--secondary-text-color);
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.79031rem; /* 89.516% */
+  letter-spacing: -0.04rem;
 }
