@@ -45,6 +45,7 @@ img {
 
 main {
   height: 100vh;
+  overflow: scroll;
   display: flex;
   background-color: var(--light-neutral-col0r-2);
   gap: 3em;
@@ -54,6 +55,9 @@ main {
 nav {
   background-color: var(--primary-color);
   color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 /* UTILITIES */
 .current {
@@ -68,6 +72,7 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   height: 70%;
+  width: max-content;
 }
 .nav-container ul {
   display: flex;
@@ -94,6 +99,7 @@ section.main {
 section.main .head-section {
   display: flex;
   justify-content: space-between;
+  width: 90%;
 }
 
 .form-group {
@@ -159,16 +165,20 @@ section.main .head-section {
 
 /* BODY SECTION */
 section.main .body-section {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  row-gap: 1.5em;
-  column-gap: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+
+  row-gap: 2.5em;
+  column-gap: 3.5em;
   height: 80%;
   width: 100%;
 }
 
 .body-section .card {
-  width: 34.125rem;
+  width: 20rem;
+  /* height: fit-content; */
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -176,7 +186,7 @@ section.main .body-section {
   justify-content: space-around;
   padding: 2em;
   border-radius: 1.25rem;
-  background: var(--light-color);
+  background: var(--light-neutral-col0r);
   box-shadow: 0px 4.07454px 24.44723px -1.01863px rgba(0, 0, 0, 0.11);
   backdrop-filter: blur(20.372695922851562px);
   transition: all 0.3s ease-in-out;
@@ -185,11 +195,55 @@ section.main .body-section {
   transform: scale(1.04);
 }
 
-.body-section .card i {
+.body-section .card > i {
   color: var(--secondary-text-color);
-  font-size: 6rem;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.79031rem; /* 89.516% */
   letter-spacing: -0.04rem;
+}
+
+.timestamp {
+  margin-top: 2.5em;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.timestamp p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+.timestamp i {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+}
+
+@media (max-width: 700px) {
+  main {
+    gap: 1em;
+  }
+  .nav-container ul li {
+    padding: 0 0.8em;
+  }
+  .nav-container ul li span {
+    display: none;
+  }
+  .head-section {
+    flex-direction: column;
+  }
+  .head-section .form-group {
+    width: 100%;
+  }
+  .head-section h1 {
+    font-size: 1rem;
+  }
+
+  .body-section .card {
+    width: 14rem;
+  }
 }
