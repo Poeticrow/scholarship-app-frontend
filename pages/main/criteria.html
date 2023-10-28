@@ -57,7 +57,7 @@
           src="https://kit.fontawesome.com/d1f77bff0d.js"
           crossorigin="anonymous"
         ></script>
-        <title>The Scholars | Scholarship criteria</title>
+        <title>The Scholars |Scholarship criteria</title>
       </head>
       <body>
         <main>
@@ -117,21 +117,102 @@
               </div>
             </div>
             <div class="body-section">
-              <div class="card">
-                <p>View scholarship</p>
-                <i class="fa-regular fa-clipboard"></i>
+              <div class="criteria">
+                <div class="progress">stuff</div>
+                <div class="criteria-section">
+                  <h4>Scholarship Criteria</h4>
+                  <div class="criteria-select">
+                    <div class="study">
+                      <label for="AOS">Area of study : </label>
+                      <select name="AOS" id="">
+                        <option value=""></option>
+                        <option value="AOS">Computer Science</option>
+                        <option value="AOS">Engineering</option>
+                        <option value="AOS">Philosophy</option>
+                        <option value="AOS">Physics</option>
+                        <option value="AOS">Geography</option>
+                        <option value="AOS">Cyber Security</option>
+                      </select>
+                    </div>
+
+                    <div class="group">
+                      <select name="country">
+                        <option value="">Country</option>
+                        <option value="country">Nigeria</option>
+                        <option value="country">USA</option>
+                        <option value="country">Canada</option>
+                        <option value="country">Germany</option>
+                        <option value="country">China</option>
+                        <option value="country">Australia</option>
+                        <option value="country">United Kingdom</option>
+                      </select>
+                      <select name="degree" id="">
+                        <option value="">Degree</option>
+                        <option value="degree">Undergraduate</option>
+                        <option value="degree">Masters</option>
+                        <option value="degree">Doctorate</option>
+                      </select>
+                    </div>
+                    <div class="gender">
+                      <label>Gender</label>
+
+                      <input type="radio" name="gender" id="female" />
+                      <label for="Female">Female</label>
+
+                      <input type="radio" name="gender" id="male" />
+                      <label for="Male">Male</label>
+
+                      <input type="radio" name="gender" id="other" />
+                      <label for="Other">Other</label>
+                    </div>
+                    <div class="study">
+                      <label for="award">Area of study : $ </label>
+                      <select name="award" id="">
+                        <option value="">0</option>
+                        <option value="award">2000</option>
+                        <option value="award">4000</option>
+                        <option value="award">5500</option>
+                        <option value="award">7000</option>
+                        <option value="award">10000</option>
+                        <option value="award">15000</option>
+                      </select>
+                    </div>
+                    <div class="gender">
+                      <label>Type</label>
+
+                      <input type="radio" name="type" id="renewable" />
+                      <label for="renewable">Renewable Award</label>
+
+                      <input type="radio" name="type" id="one-time" />
+                      <label for="one-time">One time Award</label>
+
+                      <input type="radio" name="type" id="any" />
+                      <label for="any">Any</label>
+                    </div>
+                    <div class="group">
+                      <select name="deadline">
+                        <option value="">Application deadline</option>
+                        <option value="deadline">1 month</option>
+                        <option value="deadline">2 months</option>
+                        <option value="deadline">3 months</option>
+                        <option value="deadline">4 months</option>
+                      </select>
+                    </div>
+                    <div class="buttons">
+                      <a href="./dashboard.html" class="btn">Back</a>
+                      <a href="./payments.html" class="btn">Next Step</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card">
-                <p>View Payment</p>
-                <i class="fa-solid fa-money-bills"></i>
-              </div>
-              <div class="card">
-                <p>Users</p>
-                <i class="fa-regular fa-square-check"></i>
-              </div>
-              <div class="card">
-                <p>Profile</p>
-                <i class="fa-solid fa-user"></i>
+              <div class="preview">
+                <div class="preview-info">
+                  <h2>12</h2>
+                  <p>Scholarships match your criteria</p>
+                </div>
+                <figure class="image">
+                  <img src="../../images/by-criteria.svg" alt="" />
+                </figure>
               </div>
             </div>
           </section>
