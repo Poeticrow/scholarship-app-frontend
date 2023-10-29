@@ -202,6 +202,10 @@ section.main .body-section {
   width: 100%;
   margin-top: 1em;
   flex-wrap: wrap;
+  background-color: var(--light-color);
+  border-radius: 40px;
+  height: fit-content;
+  padding: 1em;
 }
 
 .body-section .criteria {
@@ -240,6 +244,23 @@ section.main .body-section {
   margin: 0.5em 0;
 }
 
+.gender:has(input[name="nav"]) {
+  margin: 0.5em 0;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+.gender:has(input[name="nav"]) .options {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  flex-direction: column;
+  height: fit-content;
+  width: 20%;
+}
+
 .gender label:first-child {
   display: block;
   color: var(--primary-color);
@@ -272,7 +293,7 @@ section.main .body-section {
   padding: 1em;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   main {
     gap: 0.5em;
   }

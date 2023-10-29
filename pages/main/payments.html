@@ -118,21 +118,46 @@
             </div>
             <div class="body-section">
               <div class="criteria">
-                <div class="progress">stuff</div>
+                <div class="progresses">
+                  <div class="gender">
+                    <div class="options">
+                      <input type="radio" name="nav" id="card" disabled />
+                      <span>Criteria</span>
+                    </div>
+
+                    <div class="options">
+                      <input type="radio" name="nav" id="mopesa" checked />
+                      <span>Make payments</span>
+                    </div>
+                    <div class="options">
+                      <input type="radio" name="nav" id="airtel" disabled />
+                      <span>Access scholarships</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="criteria-section">
                   <div class="criteria-select">
+                    <p>Payment Method</p>
                     <div class="gender">
-                      <label>Payment Method</label>
+                      <div class="options">
+                        <input type="radio" name="payment" id="card" />
+                        <i class="fa-regular fa-credit-card icon"></i>
+                      </div>
 
-                      <input type="radio" name="payment" id="card" />
-                      <label for="card">card</label>
-
-                      <input type="radio" name="payment" id="mopesa" />
-                      <label for="mopesa">mopesa</label>
-
-                      <input type="radio" name="payment" id="airtel" />
-                      <label for="airtel">airtel</label>
+                      <div class="options">
+                        <input type="radio" name="payment" id="mopesa" />
+                        <figure class="icon">
+                          <img src="../../images/mopesa.svg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="options">
+                        <input type="radio" name="payment" id="airtel" />
+                        <figure class="icon">
+                          <img src="../../images/airtel.svg" alt="" />
+                        </figure>
+                      </div>
                     </div>
+
                     <p>Payment Details</p>
                     <form>
                       <input type="text" placeholder="Name" />
@@ -154,10 +179,10 @@
                       </div>
                     </form>
 
-                    <p>
+                    <span>
                       By clicking "Confirm Payment", I agree to the company's
                       terms of service
-                    </p>
+                    </span>
                     <div class="buttons">
                       <a href="./criteria.html" class="btn">Back</a>
                       <a href="#" class="btn"
